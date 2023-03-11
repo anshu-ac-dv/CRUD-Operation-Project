@@ -3,14 +3,14 @@
 include('dbconnection.php');
 if(isset($_POST['submit']))
   {
-  	
+  	//getting the post values
     $fname=$_POST['fname'];
     $lname=$_POST['lname'];
     $contno=$_POST['contactno'];
     $email=$_POST['email'];
     $add=$_POST['address'];
     $ppic=$_FILES["profilepic"]["name"];
-
+// get the image extension
 $extension = substr($ppic,strlen($ppic)-4,strlen($ppic));
 // allowed extensions
 $allowed_extensions = array(".jpg","jpeg",".png",".gif");
